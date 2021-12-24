@@ -26,7 +26,7 @@ function MainNavigator() {
       }}
     >
       <Stack.Screen name='Jobs' component={Jobs} options={{
-            title: "Jobs App",
+            title: "Home",
             headerStyle: { backgroundColor: "#FF6B6B" },
             headerTitleStyle: {
               color: "white",
@@ -38,7 +38,7 @@ function MainNavigator() {
           }}
  />
         <Stack.Screen name='JobDetails' component={JobDetails} options={{
-            title: "Jobs App",
+            title: "Details",
             headerStyle: { backgroundColor: "#FF6B6B" },
             headerTitleStyle: {
               color: "white",
@@ -50,7 +50,7 @@ function MainNavigator() {
           }}
 />
 <Stack.Screen name='Favorites' component={Favorites} options={{
-            title: "Jobs App",
+            title: "Favorites",
             headerStyle: { backgroundColor: "#FF6B6B" },
             headerTitleStyle: {
               color: "white",
