@@ -1,13 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import config from "../../../config";
-import {
-  View,
-  Text,
-  FlatList,
-  useWindowDimensions,
-  ScrollView,
-  SafeAreaView,
-} from "react-native";
+import { View,Text,FlatList,useWindowDimensions,ScrollView,SafeAreaView,} from "react-native";
 import useFetch from "../../hooks/useFetch/useFetch";
 import RenderHtml from "react-native-render-html";
 import Error from "../../components/Error/Error";
@@ -16,15 +9,24 @@ import styles from "./Details.styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import Button from "../../components/Button/Button";
 import SubmitButton from "../../components/SubmitButton/SubmitButton";
+import Favorites from "../Favorites/Favorites";
+import {useDispatch} from 'react-redux';
 
-function Details({ route ,navigation}) {
+
+function Details({ route, navigation }) {
   const { id } = route.params;
   const { loading, error, data } = useFetch(`${config.API_DETAIL_URL}/${id}`);
+
+  const dispatch = useDispatch();
+
   console.log(data, "burası");
   console.log(`${config.API_DETAIL_URL}/${id}`);
 
   const { width } = useWindowDimensions();
- 
+
+  const addFavorites = job=>{
+  dispatch({type:'ADD_FAVORITE',payload:{job}})
+  };
 
   const source = {
     html: `${data.contents}`,
@@ -67,8 +69,8 @@ function Details({ route ,navigation}) {
           <RenderHtml contentWidth={width} source={source} />
         </View>
         <View style={styles.button_container}>
-          <SubmitButton url={data.refs.landing_page} >Submit</SubmitButton>
-          <Button text="Favorite" onPress={() => navigation.navigate('Favorites')} />
+          <SubmitButton url={data.refs.landing_page}>Submit</SubmitButton>
+          <Button text="Favorite" onPress={()=>addFavorites(data)} />
         </View>
       </ScrollView>
     </SafeAreaView>
