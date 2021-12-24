@@ -19,7 +19,7 @@ export default function DrawerContainer(props) {
         />
         <MenuButton
           title="FAVORİTES"
-          source={require("../../../assets/icons/favorite.png")}
+          source={require("../../../assets/icons/favorite.jpeg")}
           onPress={() => {
             navigation.navigate("Favorites");
             navigation.closeDrawer();

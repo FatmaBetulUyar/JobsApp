@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 function EmptyList() {
   return (
     <View>
-      <Text>Empty List</Text>
+      <Text style={{fontSize:18,margin:15}}>Henüz Favorilere ekleme yapmadınız.</Text>
     </View>
   );
 }

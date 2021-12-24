@@ -10,11 +10,12 @@ export default (state, action) => {
       let newList = [];
 
       if (filtered) {
-        Alert.alert('Warning', 'Available in the favorite list.');
+        Alert.alert('Warning', 'Favoriler içinde zaten var.');
 
         return state;
       } else {
         newList = [...state.favoriteList, job];
+        Alert.alert('Success', 'Favorilere eklendi.');
 
         return {...state, favoriteList: newList};
       }

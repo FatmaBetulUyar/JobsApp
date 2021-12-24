@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  SafeAreaView,
-  Text,
-  StyleSheet,
-  View,
-  Alert,
-  Image,
-  Dimensions,
-} from "react-native";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import {SafeAreaView,Text, StyleSheet,View,Alert,Image,Dimensions,} from "react-native";
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,} from "firebase/auth";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { firebaseAuth, firestoreDb } from "../../FirebaseConfig";
@@ -152,6 +141,7 @@ export default function LoginRegister(props) {
         value={mail}
         placeholder="Email adresi"
         autoCapitalize="none"
+        iconName="account"
       />
       <Input
         onChangeText={setPassword}
@@ -159,6 +149,7 @@ export default function LoginRegister(props) {
         placeholder="Şifre"
         secureTextEntry={true}
         autoCapitalize="none"
+        iconName="key"
         isSecure
       />
       <Button
