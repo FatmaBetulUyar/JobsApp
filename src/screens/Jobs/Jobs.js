@@ -13,7 +13,7 @@ function Jobs({navigation}) {
     console.log(data.results)
 
     const handleJobSelect = (id) => {
-        navigation.navigate("DetailsPage",{id});
+        navigation.navigate("JobDetails",{id});
       };
     
       const renderJob= ({ item }) => (
@@ -28,7 +28,7 @@ function Jobs({navigation}) {
         return <Loading />;
       }
 
-    return <FlatList style={{backgroundColor:"white"}} data={data.results} renderItem={renderJob} />;
+    return <FlatList key={data.id} style={{backgroundColor:"white"}} data={data.results} renderItem={renderJob} />;
 }
 
 export default Jobs

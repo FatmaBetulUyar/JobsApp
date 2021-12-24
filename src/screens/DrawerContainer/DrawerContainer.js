@@ -18,24 +18,16 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="CATEGORIES"
-          source={require("../../../assets/icons/category.png")}
+          title="FAVORİTES"
+          source={require("../../../assets/icons/favorite.png")}
           onPress={() => {
             navigation.navigate("Favorites");
             navigation.closeDrawer();
           }}
         />
         <MenuButton
-          title="PUSH NOTIFICATION"
-          source={require("../../../assets/icons/search.png")}
-          onPress={() => {
-            navigation.navigate("PushNotification");
-            navigation.closeDrawer();
-          }}
-        />
-        <MenuButton
           title="LOGOUT"
-          source={require("../../../assets/icons/search.png")}
+          source={require("../../../assets/icons/logout.png")}
           onPress={() => setAuth(false)}
         />
       </View>

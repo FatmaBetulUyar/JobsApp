@@ -4,13 +4,14 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center'
   },
   container: {
     flex: 1,
     alignItems: 'flex-start',
-    paddingHorizontal: 20
+    paddingHorizontal: 30,
+    padding:30
   }
 });
 

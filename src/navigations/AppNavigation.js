@@ -9,6 +9,7 @@ import LoginRegister from '../screens/LoginRegister/LoginRegister';
 import Jobs from '../screens/Jobs/Jobs';
 import JobDetails from '../screens/Details/Details'
 import { connectStorageEmulator } from '@firebase/storage';
+import Favorites from '../screens/Favorites/Favorites';
 
 const Stack = createStackNavigator();
 
@@ -24,9 +25,42 @@ function MainNavigator() {
           }
       }}
     >
-      <Stack.Screen name='Jobs' component={Jobs} />
-      <Stack.Screen name='PushNotification' component={PushNotification} />
-      <Stack.Screen name='JobDetails' component={JobDetails}/>
+      <Stack.Screen name='Jobs' component={Jobs} options={{
+            title: "Jobs App",
+            headerStyle: { backgroundColor: "#FF6B6B" },
+            headerTitleStyle: {
+              color: "white",
+              fontWeight: "bold",
+              fontSize: 25,
+            },
+            headerTitleAlign: "center",
+            headerTintColor: "white",
+          }}
+ />
+        <Stack.Screen name='JobDetails' component={JobDetails} options={{
+            title: "Jobs App",
+            headerStyle: { backgroundColor: "#FF6B6B" },
+            headerTitleStyle: {
+              color: "white",
+              fontWeight: "bold",
+              fontSize: 25,
+            },
+            headerTitleAlign: "center",
+            headerTintColor: "white",
+          }}
+/>
+<Stack.Screen name='Favorites' component={Favorites} options={{
+            title: "Jobs App",
+            headerStyle: { backgroundColor: "#FF6B6B" },
+            headerTitleStyle: {
+              color: "white",
+              fontWeight: "bold",
+              fontSize: 25,
+            },
+            headerTitleAlign: "center",
+            headerTintColor: "white",
+          }}
+/>
     
     </Stack.Navigator>
   )

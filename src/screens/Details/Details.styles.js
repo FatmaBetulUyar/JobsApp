@@ -9,36 +9,44 @@ export default StyleSheet.create({
     title_container:{
         margin:15,
         padding:10,
-        backgroundColor:'#C8C6C6',
+        backgroundColor:'#EAEAEA',
     
     },
     data_name:{
         fontSize:20,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        padding:15,
 
     },
     text:{
         fontSize:15,
         marginBottom:5,
         marginTop:10,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        marginLeft:12
     },
     company_container:{
         flexDirection:'row',
-        justifyContent:'flex-start'
+        justifyContent:'flex-start',
+        padding:5,
+        alignItems:'center'
     },
     location_container:{
         flexDirection:'row',
-        justifyContent:'flex-start'
+        justifyContent:'flex-start',
+        padding:8,
+        alignItems:'center'
     },
     company_name:{
         fontSize:15,
         marginBottom:5,
-        marginTop:10
+        marginTop:10,
+        marginLeft:10
     },
     location_name:{
         marginBottom:5,
-        marginTop:10
+        marginTop:10,
+        marginLeft:10
     },
    
     title_detail:{
